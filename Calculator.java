@@ -36,7 +36,7 @@ public class Calculator {
             try{
             System.out.println("Enter number");
             // Try to read the first number form user 
-            num1 = myObject.nextInt();
+            num1 = myObject.nextDouble();
             //Handle invalid input
             } catch (InputMismatchException e){
                 System.out.println("You entered an invalid number");
@@ -50,7 +50,7 @@ public class Calculator {
             try{
             System.out.println("Enter next number");
             // Try to read the next number form user 
-            num2 = myObject.nextInt();
+            num2 = myObject.nextDouble();
             //Handle invalid input
             }catch (InputMismatchException e){
                 System.out.println("You entered an invalid number");
@@ -67,7 +67,7 @@ public class Calculator {
                     // Handle division by 0 
                     if (num2 == 0){
                         System.out.println("Cannot divide by 0");
-                        break;
+                        return;
                     }
                     System.out.println(num1 + " /  " + num2 + " = " + divide(num1,num2));
                     }
